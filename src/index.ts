@@ -1,8 +1,11 @@
 import express from 'express';
 import eventRouter from './routers/eventRouter';
 import { errorHandler } from './middlewares/errorMiddleware';
+var cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
